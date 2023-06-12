@@ -1,0 +1,25 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: currency-rate-service
+
+cloud:
+  eureka-host: localhost
+
+
+eureka:
+  clent:
+    enabled: false
+    serviseUrl:
+      defaultZone: http://${cloud.eureka-host}:8671/eureka
+
+
+currency:
+  client:
+    url: "https://www.cbr.ru/scripts/XML_daily.asp"
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG

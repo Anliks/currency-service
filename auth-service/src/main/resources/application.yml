@@ -1,0 +1,25 @@
+server:
+  port: 9001
+
+cloud:
+  eureka-host: localhost
+
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: jdbc:h2:mem:auth-db
+    driver-class-name: org.h2.Driver
+    username : guest
+    password : guest
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+
+
+eureka:
+  clent:
+    enabled: false
+    serviseUrl:
+      defaultZone: http://${cloud.eureka-host}:8671/eureka
