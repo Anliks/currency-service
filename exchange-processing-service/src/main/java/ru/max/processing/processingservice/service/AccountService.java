@@ -24,17 +24,17 @@ public class AccountService {
 
     public final AccountRepository accountRepository;
 
-    public final ResolveUserService userService;
+   // public final ResolveUserService userService;
 
     private final ApplicationEventPublisher eventPublisher;
 
     @Transactional
     public AccountEntity createNewAccount(NewAccountDTO dto) {
-        var userId = userService.resolveUserId();
+        //var userId = userService.resolveUserId();
         var account = new AccountEntity();
         account.setCurrencyCode(dto.getCurrencyCode());
         account.setBalance(new BigDecimal(0));
-        account.setUserId(userId);
+        account.setUserId(1l);
         var created = accountRepository.save(account);
         return created;
     }
@@ -62,8 +62,8 @@ public class AccountService {
     }
 
     public List<AccountEntity> getAllAccount() {
-        var userId = userService.resolveUserId();
-        return accountRepository.findByUserId(userId);
+     //   var userId = userService.resolveUserId();
+        return accountRepository.findByUserId(1l);
    }
    private AccountEvent createEvent(String uid, AccountEntity acc, Long targetId, Operation operation, BigDecimal amount) {
         var current = new Date();

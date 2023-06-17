@@ -3,6 +3,7 @@ package ru.max.processing.processingservice.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.max.processing.processingservice.decodeJwt.Decode;
 import ru.max.processing.processingservice.model.AccountEntity;
 import ru.max.processing.processingservice.repository.AccountRepository;
 
@@ -19,9 +20,11 @@ public class ExchangeService {
     private final CurrencyService currencyService;
 
 
-    public BigDecimal exchangeCurrency(String uid, Long fromAccountId, Long toAccountId, BigDecimal money){
+
+    public BigDecimal exchangeCurrency(Long fromAccountId, Long toAccountId, BigDecimal money){
 
         //получаем счет отправителя и получателя
+
         AccountEntity accFrom = accountService.getAccountById(fromAccountId);
         AccountEntity accTo = accountService.getAccountById(toAccountId);
 

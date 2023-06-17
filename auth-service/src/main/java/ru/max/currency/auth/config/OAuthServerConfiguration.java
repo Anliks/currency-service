@@ -1,6 +1,6 @@
 package ru.max.currency.auth.config;
 
-import lombok.RequiredArgsConstructor;
+/*import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,14 +13,14 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
-import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;*/
 
-@Configuration
-@EnableAuthorizationServer
-@RequiredArgsConstructor
-public class OAuthServerConfiguration extends AuthorizationServerConfigurerAdapter {
+//@Configuration
+//@EnableAuthorizationServer
+//@RequiredArgsConstructor
+public class OAuthServerConfiguration  {
 
-    private final AuthenticationManager authenticationManager;
+   /* private final AuthenticationManager authenticationManager;
 
     private final TokenStore tokenStore = new InMemoryTokenStore();
 
@@ -54,5 +54,5 @@ public class OAuthServerConfiguration extends AuthorizationServerConfigurerAdapt
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
         converter.setSigningKey("123");
         return converter;
-    }
+    }*/
 }

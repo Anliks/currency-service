@@ -25,14 +25,19 @@ spring:
           uri: ${cloud.currency-service-url}
           predicates:
             - Path=/currency/**
+
         - id: exchange-processing-service
-          uri: ${cloud-processing-service-url}
+          uri: ${cloud.processing-service-url}
           predicates:
             - Path=/processing/**
+          filters:
+            - AuthenticationFilter
+
         - id: auth-service
           uri: ${cloud.auth-service-url}
           predicates:
-            - Path=/oauth2/**, /user/**
+            - Path=/auth/token, /auth/register, /user/**
+
 eureka:
   client:
     serviceUrl:

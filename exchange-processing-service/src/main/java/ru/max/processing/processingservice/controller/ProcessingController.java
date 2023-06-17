@@ -35,8 +35,7 @@ public class ProcessingController {
    }
    @PutMapping("/exchange")
     public BigDecimal exchange(@RequestBody ExchangeMoneyDTO data) {
-        String uuid = "";
-       return exchangeService.exchangeCurrency(uuid, data.getFromAccountId(), data.getToAccountId(), data.getMoney());
+       return exchangeService.exchangeCurrency(data.getFromAccountId(), data.getToAccountId(), data.getMoney());
    }
 
    @GetMapping("/accounts")

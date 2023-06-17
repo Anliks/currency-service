@@ -6,7 +6,7 @@ cloud:
   eureka-host: localhost
   kafka-host: localhost
   currency-url: http://localhost:8080
-  auth-token-url: http://localhost:9001/oauth/check_token
+  auth-token-url: http://localhost:9001/validate
   user-info-url: http://localhost:9001/user
 
 spring:
@@ -44,14 +44,7 @@ eureka:
     serviceUrl:
       defaultZone: http://${cloud.eureka-host}:8761/eureka
 
-security:
-  oauth2:
-    resource:
-      token-info-uri: ${cloud.auth-token-url}
-      user-info-uri: ${cloud.user-info-url}
-    client:
-      client-id: processing
-      client-secret: processing123
+
 
 logging:
   level:

@@ -1,17 +1,17 @@
 package ru.max.processing.processingservice.service;
 
-import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties;
+/*import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoRestTemplateFactory;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
-import java.util.Optional;
+import java.util.Optional;*/
 
-@Service
+//@Service
 public class ResolveUserService {
-
+/*
     private final UserInfoRestTemplateFactory userInfoRestTemplateFactory;
 
     private final ResourceServerProperties resource;
@@ -31,5 +31,5 @@ public class ResolveUserService {
                 .map(Integer.class::cast)
                 .map(Long::valueOf)
                 .orElse(null);
-    }
+    }*/
 }

@@ -1,8 +1,11 @@
 package ru.max.currency.auth.model;
 
+
+
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +21,7 @@ import java.util.Collection;
 @AllArgsConstructor
 @Entity
 @Table(name = "AUTH_USER")
-public class UserEntity implements UserDetails {
+public class UserEntity  {
 
     @Id
     @Column(name = "user_id")
@@ -29,38 +32,5 @@ public class UserEntity implements UserDetails {
 
     @Column(name = "password")
     private String password;
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return new ArrayList<>();
-    }
 
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public String getUsername() {
-        return username;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
 }

@@ -1,15 +1,17 @@
 package ru.max.currency.auth.service;
 
+/*
 import org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoRestTemplateFactory;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 
 import java.util.Map;
 import java.util.Optional;
+*/
 
 public class ResolveUserService {
 
-    private final UserInfoRestTemplateFactory restTemplateFactory;
+   /* private final UserInfoRestTemplateFactory restTemplateFactory;
 
     private final ResourceServerProperties resource;
 
@@ -26,5 +28,5 @@ public class ResolveUserService {
                 .map(v -> (Integer) v.get("userId"))
                 .map(Long::valueOf)
                 .orElse(null);
-    }
+    }*/
 }
